@@ -1,0 +1,27 @@
+.chars {
+  display: flex;
+  justify-content: center;
+  gap: var(--char-gap, 10px);
+}
+
+.char {
+  display: flex;
+  flex-direction: column;
+  gap: var(--cell-gap, 2px);
+}
+
+.char .row {
+  display: flex;
+  gap: var(--cell-gap, 2px);
+}
+
+.char .row .cell {
+  width: var(--cell-size, 10px);
+  height: var(--cell-size, 10px);
+}
+
+.char .cell.marked {
+  opacity: 0;
+  transform: translate3D(0, -100%, 0);
+  background: var(--cell-background, black);
+}

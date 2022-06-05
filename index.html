@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AteBit Demo</title>
+    <style>
+      .the-odin {
+        --cell-background: maroon;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chars dragi-ns">
+      <div class="char" data-char="d"></div>
+      <div class="char" data-char="r"></div>
+      <div class="char" data-char="a"></div>
+      <div class="char" data-char="g"></div>
+      <div class="char" data-char="i"></div>
+      <div class="char" data-char="-"></div>
+      <div class="char" data-char="n"></div>
+      <div class="char" data-char="s"></div>
+    </div>
+    <br />
+    <br />
+    <div class="chars the-odin">
+      <div class="char" data-char="t"></div>
+      <div class="char" data-char="h"></div>
+      <div class="char" data-char="e"></div>
+      <div class="char" data-char=" "></div>
+      <div class="char" data-char="o"></div>
+      <div class="char" data-char="d"></div>
+      <div class="char" data-char="i"></div>
+      <div class="char" data-char="n"></div>
+    </div>
+    <script src="./dist/atebit.js"></script>
+    <script>
+      AteBit.animate(document.querySelectorAll('.dragi-ns .char'), [
+        [
+          { opacity: 0, transform: 'scale(0)' },
+          { opacity: 1, transform: 'scale(1.5)' },
+          { opacity: 1, transform: 'scale(1)' },
+        ],
+        {
+          duration: 150,
+          fill: 'forwards',
+        },
+      ]);
+      AteBit.animate(document.querySelectorAll('.the-odin .char'), [
+        [
+          { opacity: 0, transform: 'rotate(0deg)' },
+          { opacity: 1, transform: 'rotate(360deg)' },
+        ],
+        {
+          duration: 250,
+          fill: 'forwards',
+        },
+      ]);
+    </script>
+  </body>
+</html>

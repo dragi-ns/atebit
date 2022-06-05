@@ -1,0 +1,14 @@
+# source code
+src
+index.html
+
+# compiler
+webpack.config.js
+
+#  lint
+.eslintrc.js
+.prettierrc
+
+# git
+.git
+.gitignore
